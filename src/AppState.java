@@ -1,0 +1,4 @@
+public enum AppState {
+    STANDBY, EDIT, FINALIZATION, QTY_INCREASE, QTY_DECREASE, EXIT;
+}
+
