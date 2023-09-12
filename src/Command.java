@@ -1,5 +1,7 @@
 import java.io.IOException;
 import java.io.PrintStream;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
@@ -98,6 +100,9 @@ public class Command {
         printReceipt();
     }
     public void printReceipt(){
+        DateTimeFormatter dtfDay = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter dtfTime = DateTimeFormatter.ofPattern("HH:mm:ss");
+        LocalDateTime currentTime = LocalDateTime.now();
         System.out.printf("==========================%n" +
                 "BinarFud%n" +
                 "==========================%n" +
@@ -106,23 +111,23 @@ public class Command {
                 "di BinarFud%n" +
                 "%n" +
                 "Dibawah ini adalah pesanan anda%n");
-        int numbering = 1;
         for(Map.Entry<FoodBeverage, Integer> listOrder : order.entrySet()){
             int qty = listOrder.getValue();
             String price = priceToString(listOrder.getKey().getPrice() * qty);
             String name = listOrder.getKey().getName();
-            System.out.printf("%n%d. %-15s %3d  %10s", numbering, name, qty, price);
-            numbering++;
+            System.out.printf("%n%-15s %3d   %10s", name, qty, price);
         }
-        System.out.printf("%n----------------------------------+%n" +
-                "SubTotal %-9s %3d  %10s%n", "", totalQty, priceToString(totalPrice));
+        System.out.printf("%n---------------------------------+%n" +
+                "SubTotal %-6s %3d   %10s%n", "", totalQty, priceToString(totalPrice));
         int ppn = totalPrice/10;
-        System.out.printf("PPN 10%% %-16s%10s%n", "", priceToString(ppn));
-        System.out.printf("----------------------------------+%n" +
-                "Total %-18s%10s%n", "", priceToString(totalPrice+ppn));
+        System.out.printf("PPN 10%%  %-13s%10s%n", "", priceToString(ppn));
+        System.out.printf("---------------------------------+%n" +
+                "Total %-16s%10s%n", "", priceToString(totalPrice+ppn));
         System.out.printf("%n" +
                 "Pembayaran : BinarCash%n" +
-                "%n" +
+                dtfDay.format(currentTime) +
+                "%n" + dtfTime.format(currentTime) +
+                "%n%n" +
                 "==========================%n" +
                 "Simpan struk ini sebagai%n" +
                 "bukti pembayaran%n" +
