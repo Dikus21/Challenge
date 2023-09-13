@@ -16,17 +16,19 @@ public class Command {
     Command() {
         mainMenu();
     }
-    public boolean online(){
+
+    public boolean online() {
         return state != AppState.EXIT;
     }
+
     public void menu(String input) throws IOException {
-        if(!numberChecker(input)){
+        if (!numberChecker(input)) {
             if (state == AppState.QTY_INCREASE || state == AppState.QTY_DECREASE) System.out.print("Qty => ");
             else System.out.print("=> ");
             return;
         }
         int num = Integer.parseInt(input);
-        switch (state){
+        switch (state) {
             case STANDBY:
                 setState(num);
                 break;
@@ -45,34 +47,25 @@ public class Command {
 
         }
     }
-    public void setState(int num){
-        if(num > 0 && num <= FoodBeverage.values().length){
+
+    public void setState(int num) {
+        if (num > 0 && num <= FoodBeverage.values().length) {
             state = AppState.QTY_INCREASE;
             foodChoice(num);
-        } else if (num == 99){
+        } else if (num == 99) {
+            if (orderIsEmpty()) return;
             state = AppState.FINALIZATION;
             printOrder();
-        } else if (num == 0){
+        } else if (num == 0) {
             state = AppState.EXIT;
         } else {
             System.out.println("Unidentified input!");
             System.out.print("=> ");
         }
     }
-    public boolean numberChecker(String input){
-        try {
-            if(Integer.parseInt(input) >= 0)return true;
-            else {
-                System.out.println("Negative value input!");
-                return false;
-            }
-        } catch (NumberFormatException nfe){
-            System.out.println("Unrecognized input");
-            return false;
-        }
-    }
+
     public void orderFinalization(int num) throws IOException {
-        switch (num){
+        switch (num) {
             case 1:
                 printReceipt();
                 printReceiptToText();
@@ -94,16 +87,34 @@ public class Command {
                 break;
         }
     }
-    public void printReceiptToText() throws IOException {
-        PrintStream stream = new PrintStream("reciept.txt");
-        System.setOut(stream);
-        printReceipt();
+
+    public void mainMenu() {
+        state = AppState.STANDBY;
+        System.out.printf(
+                "==========================%n" +
+                        "Selamat datang di BinarFud%n" +
+                        "==========================%n" +
+                        "%n" +
+                        "Menu Utama :%n"
+        );
+        for (FoodBeverage foodList : FoodBeverage.values()) {
+            String price = priceToString(foodList.getPrice());
+            System.out.printf("%d. %-12s | %s%n", foodList.ordinal() + 1, foodList.getName(), price);
+        }
+        System.out.printf(
+                "99. Pesan dan Bayar%n" +
+                        "0. Keluar Aplikasi%n" +
+                        "=> "
+        );
     }
-    public void printReceipt(){
+
+    public void printReceipt() {
+        int ppn = totalPrice / 10;
         DateTimeFormatter dtfDay = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter dtfTime = DateTimeFormatter.ofPattern("HH:mm:ss");
         LocalDateTime currentTime = LocalDateTime.now();
-        System.out.printf("==========================%n" +
+        System.out.printf(
+                "==========================%n" +
                 "BinarFud%n" +
                 "==========================%n" +
                 "%n" +
@@ -111,18 +122,17 @@ public class Command {
                 "di BinarFud%n" +
                 "%n" +
                 "Dibawah ini adalah pesanan anda%n");
-        for(Map.Entry<FoodBeverage, Integer> listOrder : order.entrySet()){
+        for (Map.Entry<FoodBeverage, Integer> listOrder : order.entrySet()) {
             int qty = listOrder.getValue();
             String price = priceToString(listOrder.getKey().getPrice() * qty);
             String name = listOrder.getKey().getName();
             System.out.printf("%n%-15s %3d   %10s", name, qty, price);
         }
-        System.out.printf("%n---------------------------------+%n" +
-                "SubTotal %-6s %3d   %10s%n", "", totalQty, priceToString(totalPrice));
-        int ppn = totalPrice/10;
+        System.out.printf("%n---------------------------------+%n");
+        System.out.printf("SubTotal %-6s %3d   %10s%n", "", totalQty, priceToString(totalPrice));
         System.out.printf("PPN 10%%  %-13s%10s%n", "", priceToString(ppn));
-        System.out.printf("---------------------------------+%n" +
-                "Total %-16s%10s%n", "", priceToString(totalPrice+ppn));
+        System.out.printf("---------------------------------+%n");
+        System.out.printf("Total %-16s%10s%n", "", priceToString(totalPrice + ppn));
         System.out.printf("%n" +
                 "Pembayaran : BinarCash%n" +
                 dtfDay.format(currentTime) +
@@ -133,141 +143,160 @@ public class Command {
                 "bukti pembayaran%n" +
                 "==========================%n");
     }
-    public void printOrder(){
-        System.out.printf("==========================%n" +
-                "Konfirmasi & Pembayaran%n" +
-                "==========================%n");
-        for(Map.Entry<FoodBeverage, Integer> listOrder : order.entrySet()){
+
+    public void printReceiptToText() throws IOException {
+        PrintStream stream = new PrintStream("reciept.txt");
+        System.setOut(stream);
+        printReceipt();
+    }
+
+    public void printOrder() {
+        int ppn = totalPrice / 10;
+        System.out.printf(
+                "==========================%n" +
+                        "Konfirmasi & Pembayaran%n" +
+                        "==========================%n"
+        );
+        for (Map.Entry<FoodBeverage, Integer> listOrder : order.entrySet()) {
             int qty = listOrder.getValue();
             String price = priceToString(listOrder.getKey().getPrice() * qty);
             String name = listOrder.getKey().getName();
             System.out.printf("%n%-15s %3d   %10s", name, qty, price);
         }
-        System.out.printf("%n---------------------------------+%n" +
-                "SubTotal %-6s %3d   %10s%n", "", totalQty, priceToString(totalPrice));
-        int ppn = totalPrice/10;
+        System.out.printf("%n---------------------------------+%n");
+        System.out.printf("SubTotal %-6s %3d   %10s%n", "", totalQty, priceToString(totalPrice));
         System.out.printf("PPN 10%%  %-13s%10s%n", "", priceToString(ppn));
-        System.out.printf("---------------------------------+%n" +
-                "Total %-16s%10s%n", "", priceToString(totalPrice+ppn));
-        System.out.printf("%n" +
-                "1. Konfirmasi dan Bayar%n" +
-                "2. Edit order%n" +
-                "3. Kembali kemenu utama%n" +
-                "0. Keluar aplikasi%n" +
-                "=> ");
-    }
-    public void mainMenu() {
-        state = AppState.STANDBY;
-        System.out.printf("==========================%n" +
-                        "Selamat datang di BinarFud%n" +
-                        "==========================%n" +
-                        "%n" +
-                        "Menu Utama :%n");
-        for (FoodBeverage foodList : FoodBeverage.values()){
-            String price = priceToString(foodList.getPrice());
-            System.out.printf("%d. %-12s | %s%n", foodList.ordinal()+1, foodList.getName(), price);
-        }
-        System.out.printf("99. Pesan dan Bayar%n" +
-                        "0. Keluar Aplikasi%n" +
-                        "=> ");
+        System.out.printf("---------------------------------+%n");
+        System.out.printf("Total %-16s%10s%n", "", priceToString(totalPrice + ppn));
+        System.out.printf(
+                "%n" +
+                        "1. Konfirmasi dan Bayar%n" +
+                        "2. Edit order%n" +
+                        "3. Kembali kemenu utama%n" +
+                        "0. Keluar aplikasi%n" +
+                        "=> "
+        );
     }
 
-    public void foodChoice(int num){
-        if(num > FoodBeverage.values().length || num < 0){
+    public void foodChoice(int num) {
+        if (num > FoodBeverage.values().length || num < 0) {
             System.out.println("Unregister menu!");
             System.out.print("=> ");
             return;
-        } else if (num == 0){
+        } else if (num == 0) {
             mainMenu();
             return;
         }
         state = AppState.QTY_INCREASE;
         food = FoodBeverage.values()[num - 1];
         String price = priceToString(food.getPrice());
-        System.out.printf("==========================%n" +
-                "Berapa jumlah pesanan anda%n" +
+        System.out.printf(
                 "==========================%n" +
-                "%n" +
-                "%-12s | %s%n" +
-                "(input 0 untuk kembali)%n" +
-                "%n" +
-                "Qty => ", food.getName(), price);
+                        "Berapa jumlah pesanan anda%n" +
+                        "==========================%n" +
+                        "%n" +
+                        "%-12s | %s%n" +
+                        "(input 0 untuk kembali)%n" +
+                        "%n" +
+                        "Qty => ", food.getName(), price
+        );
     }
-    public void foodQtyInc(int qty){
-        if (qty > 0){
-            order.merge(food, qty, Integer::sum);
-            totalPrice += food.getPrice() * qty;
-            totalQty += qty;
-        }
-        mainMenu();
-    }
-    public String priceToString(int price){
-        String result = String.valueOf(price);
-        int thousand = result.length() - 3;
-        while (thousand > 0){
-            result = result.substring(0, thousand) + '.' + result.substring(thousand);
-            thousand -= 3;
-        }
-        return result;
-    }
-    public void edit(){
-        System.out.printf("==========================%n" +
-                "Pilih pesanan yang diubah :%n" +
-                "==========================%n");
+
+    public void edit() {
+        int ppn = totalPrice / 10;
+        System.out.printf(
+                "==========================%n" +
+                        "Daftar pesanan :%n" +
+                        "==========================%n");
         int numbering = 1;
-        for(Map.Entry<FoodBeverage, Integer> listOrder : order.entrySet()){
+        for (Map.Entry<FoodBeverage, Integer> listOrder : order.entrySet()) {
             int qty = listOrder.getValue();
             String price = priceToString(listOrder.getKey().getPrice() * qty);
             String name = listOrder.getKey().getName();
             System.out.printf("%n%d. %-15s %3d  %10s", numbering, name, qty, price);
             numbering++;
         }
-        System.out.printf("%n----------------------------------+%n" +
-                "SubTotal %-9s %3d  %10s%n", "", totalQty, priceToString(totalPrice));
-        int ppn = totalPrice/10;
+        System.out.printf("%n----------------------------------+%n");
+        System.out.printf("SubTotal %-9s %3d  %10s%n", "", totalQty, priceToString(totalPrice));
         System.out.printf("PPN 10%% %-16s%10s%n", "", priceToString(ppn));
-        System.out.printf("----------------------------------+%n" +
-                "Total %-18s%10s%n", "", priceToString(totalPrice+ppn));
+        System.out.printf("----------------------------------+%n");
+        System.out.printf("Total %-18s%10s%n", "", priceToString(totalPrice + ppn));
         System.out.printf("%n" +
                 "0. Kembali ke pembayaran%n" +
+                "Pilih pesanan yang ingin diubah%n" +
                 "=> ");
     }
-    public void editChoice(int num){
-        if(num == 0){
+
+    public void editChoice(int num) {
+        if (num == 0) {
             state = AppState.FINALIZATION;
             printOrder();
             return;
         }
         Set<FoodBeverage> keySet = order.keySet();
         FoodBeverage[] keyArray = keySet.toArray(new FoodBeverage[0]);
-        food = keyArray[num-1];
+        food = keyArray[num - 1];
         state = AppState.QTY_DECREASE;
-        System.out.printf("Masukan jumlah yang diinginkan%n" +
-                "Qty=> ");
+        System.out.printf(
+                "Masukan jumlah yang diinginkan%n" +
+                "Qty=> "
+        );
     }
-    public void foodQtyDec(int qty){
+
+    public void foodQtyInc(int qty) {
+        if (qty > 0) {
+            order.merge(food, qty, Integer::sum);
+            totalPrice += food.getPrice() * qty;
+            totalQty += qty;
+        }
+        mainMenu();
+    }
+
+    public void foodQtyDec(int qty) {
         totalPrice += food.getPrice() * (qty - order.get(food));
         totalQty += qty - order.get(food);
-        if(qty == 0){
+        if (qty == 0) {
             order.remove(food);
         } else {
             order.put(food, qty);
+        }
+        if (orderIsEmpty()) {
+            mainMenu();
+            return;
         }
         edit();
         state = AppState.EDIT;
     }
 
-    /*public void foodMenu() {
-        System.out.printf("==========================%n" +
-                "Menu makanan di BinarFud%n" +
-                "==========================%n" +
-                "%n" +
-                "Silahkan pilih makanan :%n");
-        for (FoodBeverage foodList : FoodBeverage.values()){
-            String price = priceToString(foodList.getPrice());
-            System.out.printf("%d. %-12s | %s%n", foodList.ordinal()+1, foodList.getName(), price);
+    public String priceToString(int price) {
+        String result = String.valueOf(price);
+        int thousand = result.length() - 3;
+        while (thousand > 0) {
+            result = result.substring(0, thousand) + '.' + result.substring(thousand);
+            thousand -= 3;
         }
-        System.out.printf("0. Kembali kemenu utama%n" +
-                "%n=> ");
-    }*/
+        return result;
+    }
+
+    public boolean numberChecker(String input) {
+        try {
+            if (Integer.parseInt(input) >= 0) return true;
+            else {
+                System.out.println("Negative value input!");
+                return false;
+            }
+        } catch (NumberFormatException nfe) {
+            System.out.println("Unrecognized input");
+            return false;
+        }
+    }
+
+    public boolean orderIsEmpty() {
+        if (totalQty == 0) {
+            System.out.println("No order listed!");
+            System.out.print("=> ");
+            return true;
+        }
+        return false;
+    }
 }
