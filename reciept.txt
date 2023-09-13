@@ -19,8 +19,8 @@ PPN 10%                  534.600
 Total                  5.880.600
 
 Pembayaran : BinarCash
-13/09/2023
-23:58:43
+14/09/2023
+00:48:54
 
 ==========================
 Simpan struk ini sebagai

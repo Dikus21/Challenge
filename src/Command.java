@@ -14,7 +14,7 @@ public class Command {
     private int totalQty;
 
     Command() {
-        mainMenu();
+        mainMenuTemplate();
     }
 
     public boolean online() {
@@ -23,39 +23,39 @@ public class Command {
 
     public void menu(String input) throws IOException {
         if (!numberChecker(input)) {
-            if (state == AppState.QTY_INCREASE || state == AppState.QTY_DECREASE) System.out.print("Qty => ");
+            if (state == AppState.QTY_INCREASE || state == AppState.QTY_EDIT) System.out.print("Qty => ");
             else System.out.print("=> ");
             return;
         }
         int num = Integer.parseInt(input);
         switch (state) {
             case STANDBY:
-                setState(num);
+                mainMenu(num);
                 break;
             case QTY_INCREASE:
                 foodQtyInc(num);
                 break;
             case FINALIZATION:
-                orderFinalization(num);
+                orderFinalizationMenu(num);
                 break;
             case EDIT:
-                editChoice(num);
+                editOrder(num);
                 break;
-            case QTY_DECREASE:
-                foodQtyDec(num);
+            case QTY_EDIT:
+                foodQtyEdit(num);
                 break;
 
         }
     }
 
-    public void setState(int num) {
+    private void mainMenu(int num) {
         if (num > 0 && num <= FoodBeverage.values().length) {
             state = AppState.QTY_INCREASE;
-            foodChoice(num);
+            foodOrder(num);
         } else if (num == 99) {
             if (orderIsEmpty()) return;
             state = AppState.FINALIZATION;
-            printOrder();
+            printOrderTemplate();
         } else if (num == 0) {
             state = AppState.EXIT;
         } else {
@@ -64,19 +64,19 @@ public class Command {
         }
     }
 
-    public void orderFinalization(int num) throws IOException {
+    private void orderFinalizationMenu(int num) throws IOException {
         switch (num) {
             case 1:
-                printReceipt();
+                printReceiptTemplate();
                 printReceiptToText();
                 state = AppState.EXIT;
                 break;
             case 2:
-                edit();
+                editTemplate();
                 state = AppState.EDIT;
                 break;
             case 3:
-                mainMenu();
+                mainMenuTemplate();
                 state = AppState.STANDBY;
                 break;
             case 0:
@@ -88,7 +88,7 @@ public class Command {
         }
     }
 
-    public void mainMenu() {
+    private void mainMenuTemplate() {
         state = AppState.STANDBY;
         System.out.printf(
                 "==========================%n" +
@@ -108,7 +108,7 @@ public class Command {
         );
     }
 
-    public void printReceipt() {
+    private void printReceiptTemplate() {
         int ppn = totalPrice / 10;
         DateTimeFormatter dtfDay = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter dtfTime = DateTimeFormatter.ofPattern("HH:mm:ss");
@@ -144,13 +144,13 @@ public class Command {
                 "==========================%n");
     }
 
-    public void printReceiptToText() throws IOException {
+    private void printReceiptToText() throws IOException {
         PrintStream stream = new PrintStream("reciept.txt");
         System.setOut(stream);
-        printReceipt();
+        printReceiptTemplate();
     }
 
-    public void printOrder() {
+    private void printOrderTemplate() {
         int ppn = totalPrice / 10;
         System.out.printf(
                 "==========================%n" +
@@ -178,13 +178,13 @@ public class Command {
         );
     }
 
-    public void foodChoice(int num) {
+    private void foodOrder(int num) {
         if (num > FoodBeverage.values().length || num < 0) {
             System.out.println("Unregister menu!");
             System.out.print("=> ");
             return;
         } else if (num == 0) {
-            mainMenu();
+            mainMenuTemplate();
             return;
         }
         state = AppState.QTY_INCREASE;
@@ -202,7 +202,7 @@ public class Command {
         );
     }
 
-    public void edit() {
+    private void editTemplate() {
         int ppn = totalPrice / 10;
         System.out.printf(
                 "==========================%n" +
@@ -227,32 +227,32 @@ public class Command {
                 "=> ");
     }
 
-    public void editChoice(int num) {
+    private void editOrder(int num) {
         if (num == 0) {
             state = AppState.FINALIZATION;
-            printOrder();
+            printOrderTemplate();
             return;
         }
         Set<FoodBeverage> keySet = order.keySet();
         FoodBeverage[] keyArray = keySet.toArray(new FoodBeverage[0]);
         food = keyArray[num - 1];
-        state = AppState.QTY_DECREASE;
+        state = AppState.QTY_EDIT;
         System.out.printf(
                 "Masukan jumlah yang diinginkan%n" +
                 "Qty=> "
         );
     }
 
-    public void foodQtyInc(int qty) {
+    private void foodQtyInc(int qty) {
         if (qty > 0) {
             order.merge(food, qty, Integer::sum);
             totalPrice += food.getPrice() * qty;
             totalQty += qty;
         }
-        mainMenu();
+        mainMenuTemplate();
     }
 
-    public void foodQtyDec(int qty) {
+    private void foodQtyEdit(int qty) {
         totalPrice += food.getPrice() * (qty - order.get(food));
         totalQty += qty - order.get(food);
         if (qty == 0) {
@@ -261,14 +261,14 @@ public class Command {
             order.put(food, qty);
         }
         if (orderIsEmpty()) {
-            mainMenu();
+            mainMenuTemplate();
             return;
         }
-        edit();
+        editTemplate();
         state = AppState.EDIT;
     }
 
-    public String priceToString(int price) {
+    private String priceToString(int price) {
         String result = String.valueOf(price);
         int thousand = result.length() - 3;
         while (thousand > 0) {
@@ -291,7 +291,7 @@ public class Command {
         }
     }
 
-    public boolean orderIsEmpty() {
+    private boolean orderIsEmpty() {
         if (totalQty == 0) {
             System.out.println("No order listed!");
             System.out.print("=> ");
