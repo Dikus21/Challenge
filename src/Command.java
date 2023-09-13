@@ -84,6 +84,7 @@ public class Command {
                 break;
             default:
                 System.out.println("Unrecognized input!");
+                System.out.print("=> ");
                 break;
         }
     }
@@ -231,6 +232,10 @@ public class Command {
         if (num == 0) {
             state = AppState.FINALIZATION;
             printOrderTemplate();
+            return;
+        } else if (num > order.size()) {
+            System.out.println("Unrecognized input!");
+            System.out.print("=> ");
             return;
         }
         Set<FoodBeverage> keySet = order.keySet();
