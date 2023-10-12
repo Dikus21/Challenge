@@ -1,8 +1,0 @@
-
-E	java:S1060"+Replace this use of System.out by a logger.(­–´½øÿÿÿÿ
-E	java:S1069"+Replace this use of System.out by a logger.(­–´½øÿÿÿÿ
-m
-java:S3776>"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¡ô§ìúÿÿÿÿ
-?	java:S106A"+Replace this use of System.out by a logger.(³ØD
-@	java:S106B"+Replace this use of System.out by a logger.(úÂğñ
-E	java:S106U"+Replace this use of System.out by a logger.(­–´½øÿÿÿÿ
