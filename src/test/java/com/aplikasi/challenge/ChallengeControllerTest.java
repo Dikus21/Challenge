@@ -1,10 +1,10 @@
 package com.aplikasi.challenge;
 
-import com.aplikasi.challenge.controller.MenuController;
-import com.aplikasi.challenge.model.AppState;
-import com.aplikasi.challenge.model.service.ListMenuService;
-import com.aplikasi.challenge.model.service.OrderService;
-import com.aplikasi.challenge.view.MenuView;
+import com.aplikasi.challenge.c3.controller.MenuController;
+import com.aplikasi.challenge.c3.model.AppState;
+import com.aplikasi.challenge.c3.model.service.ListMenuService;
+import com.aplikasi.challenge.c3.model.service.OrderService;
+import com.aplikasi.challenge.c3.view.MenuView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
