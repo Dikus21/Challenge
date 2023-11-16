@@ -1,49 +1,59 @@
-//package com.aplikasi.challenge.utils.jasper;
+package com.aplikasi.challenge.utils.jasper;
+
+import com.aplikasi.challenge.dto.OrderDetailDTO;
+import com.aplikasi.challenge.entity.Order;
+import com.aplikasi.challenge.entity.Users;
+import com.aplikasi.challenge.repository.UserRepository;
+import net.sf.jasperreports.engine.JRDataSource;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.transaction.Transactional;
+import java.util.*;
+import java.util.stream.Collectors;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class test {
+    @Autowired
+    public UserRepository userRepository;
+    @Autowired
+    public ReportService reportService;
+
+    @Test
+    @Transactional
+    public void test1() {
+        UUID uuid = UUID.fromString("783b6a20-bd57-4937-9c07-0073fc6fc05f");
+        Users users = userRepository.findByIdWithOrders(uuid);
+        List<OrderDetailDTO> orderDetailDTOList = users.getOrders().stream()
+                .map(Order::getOrderDetails)
+                .flatMap(List::stream)
+                .map(orderDetail -> {
+                    OrderDetailDTO dto = new OrderDetailDTO();
+                    dto.setDetailId(String.valueOf(orderDetail.getId()));
+                    dto.setQuantity(orderDetail.getQuantity());
+                    dto.setTotalPrice(orderDetail.getTotalPrice());
+                    dto.setPrice(orderDetail.getProduct().getPrice());
+                    dto.setProductName(orderDetail.getProduct().getName());
+                    return dto;
+                })
+                .collect(Collectors.toList());
 //
-//import com.aplikasi.challenge.entity.OrderDetail;
-//import com.aplikasi.challenge.entity.Users;
-//import com.aplikasi.challenge.repository.UserRepository;
-//import com.aplikasi.challenge.service.InvoiceService;
-//import net.sf.jasperreports.engine.*;
-//import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-//import org.junit.Test;
-//import org.junit.runner.RunWith;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.context.SpringBootTest;
-//import org.springframework.core.io.ClassPathResource;
-//import org.springframework.test.context.junit4.SpringRunner;
-//
-//import java.io.IOException;
-//import java.io.InputStream;
-//import java.sql.SQLException;
-//import java.util.*;
-//
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//public class test {
-//    @Autowired
-//    public ReportService reportService;
-//    @Autowired
-//    public InvoiceService invoiceService;
-//    @Autowired
-//    public UserRepository userRepository;
-//
-//    @Test
-//    public void test() throws SQLException, IOException, JRException {
-//        UUID uuid = UUID.fromString("783b6a20-bd57-4937-9c07-0073fc6fc05f");
-//        Users users = userRepository.getById(uuid);
-//        List<OrderDetail> orderDetailList = userRepository.getListOrderDetail(users.getId());
-//
-//        JRDataSource dataSource = new JRBeanCollectionDataSource(orderDetailList);
-//
-//        InputStream reportStream = new ClassPathResource("./report/User_Invoice.jrxml").getInputStream();
-//
-//        Map<String, Object> parameters = new HashMap<>();
-//        parameters.put("USER_ID", users.getId().toString());
-//        parameters.put("USERNAME", users.getUsername());
-//        parameters.put("USER_EMAIL", users.getEmailAddress());
-//        parameters.put("CREATED_DATE_INVOICE", new Date());
-//
-//        reportService.generate_pdf(parameters, reportStream, dataSource);
-//    }
-//}
+        System.out.println(orderDetailDTOList);
+        JRDataSource dataSource = new JRBeanCollectionDataSource(orderDetailDTOList);
+
+        String path = "D:\\Andika\\BootCamp(SYNERGY)\\Project\\Challenge\\Challenge_3\\report\\Blank_A4.jrxml";
+
+        Map<String, Object> parameters = new HashMap<>();
+        parameters.put("USER_ID", users.getId().toString());
+        parameters.put("USERNAME", users.getUsername());
+        parameters.put("USER_EMAIL", users.getEmailAddress());
+        parameters.put("CREATED_DATE_INVOICE", new Date());
+
+        reportService.generate_pdf(parameters, path, dataSource);
+    }
+}

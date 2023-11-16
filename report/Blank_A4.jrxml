@@ -8,21 +8,25 @@
 	</parameter>
 	<parameter name="USERNAME" class="java.lang.String"/>
 	<parameter name="USER_EMAIL" class="java.lang.String"/>
-	<parameter name="CREATED_DATE_INVOICE" class="java.sql.Date"/>
+	<parameter name="CREATED_DATE_INVOICE" class="java.util.Date"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
-	<field name="id" class="java.lang.String">
-		<fieldDescription><![CDATA[OrderDetail id]]></fieldDescription>
+	<field name="detailId" class="java.lang.String">
+		<fieldDescription><![CDATA[detailId]]></fieldDescription>
 	</field>
 	<field name="quantity" class="java.lang.Integer">
-		<fieldDescription><![CDATA[order quantity]]></fieldDescription>
+		<fieldDescription><![CDATA[quantity]]></fieldDescription>
 	</field>
 	<field name="totalPrice" class="java.math.BigDecimal">
-		<fieldDescription><![CDATA[total price for the order]]></fieldDescription>
+		<fieldDescription><![CDATA[totalPrice]]></fieldDescription>
 	</field>
-	<field name="productName" class="java.lang.String"/>
-	<field name="price" class="java.math.BigDecimal"/>
+	<field name="productName" class="java.lang.String">
+		<fieldDescription><![CDATA[productName]]></fieldDescription>
+	</field>
+	<field name="price" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[price]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -121,7 +125,7 @@
 			<textField>
 				<reportElement x="-20" y="0" width="100" height="30" uuid="1d6e575a-cf0f-446a-8dcd-07b5686ea2d7"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{detailId}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="280" y="0" width="100" height="30" uuid="f841afcd-5706-4a50-b9f9-19660fb13bfc"/>

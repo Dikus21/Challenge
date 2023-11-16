@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Map;
 
@@ -22,7 +21,7 @@ public class ReportService {
 
     @Autowired
     DataSource dataSource;
-    public byte[] generate_pdf(Map<String, Object> parameters, InputStream inputStream, JRDataSource dataSource) {
+    public byte[] generate_pdf(Map<String, Object> parameters, String inputStream, JRDataSource dataSource) {
         try {
             JasperReport report = JasperCompileManager.compileReport(inputStream);
 

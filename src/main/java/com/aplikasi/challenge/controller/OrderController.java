@@ -1,14 +1,13 @@
 package com.aplikasi.challenge.controller;
 
 import com.aplikasi.challenge.entity.Order;
-import com.aplikasi.challenge.entity.Users;
 import com.aplikasi.challenge.repository.OrderRepository;
 import com.aplikasi.challenge.service.InvoiceService;
 import com.aplikasi.challenge.service.OrderService;
 import com.aplikasi.challenge.utils.SimpleStringUtils;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
-import org.springframework.core.io.InputStreamResource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -38,9 +37,9 @@ public class OrderController {
     public SimpleStringUtils simpleStringUtils;
 
     @PostMapping(value = {"/generateInvoice"})
-    public ResponseEntity<?> generateInvoice(@RequestBody Users users) {
+    public ResponseEntity<?> generateInvoice(@RequestBody Order request) {
         try {
-            byte[] pdfData = invoiceService.generateInvoice(users);
+            byte[] pdfData = invoiceService.generateInvoice(request);
             ByteArrayInputStream bis = new ByteArrayInputStream(pdfData);
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Disposition", "inline; filename=invoice.pdf");
