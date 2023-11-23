@@ -3,7 +3,7 @@ package com.aplikasi.challenge.utils.jasper;
 import com.aplikasi.challenge.dto.OrderDetailDTO;
 import com.aplikasi.challenge.entity.Order;
 import com.aplikasi.challenge.entity.Users;
-import com.aplikasi.challenge.repository.UserRepository;
+import com.aplikasi.challenge.repository.UsersRepository;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.junit.Test;
@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class test {
     @Autowired
-    public UserRepository userRepository;
+    public UsersRepository usersRepository;
     @Autowired
     public ReportService reportService;
 
@@ -28,7 +28,7 @@ public class test {
     @Transactional
     public void test1() {
         UUID uuid = UUID.fromString("783b6a20-bd57-4937-9c07-0073fc6fc05f");
-        Users users = userRepository.findByIdWithOrders(uuid);
+        Users users = usersRepository.findByIdWithOrders(uuid);
         List<OrderDetailDTO> orderDetailDTOList = users.getOrders().stream()
                 .map(Order::getOrderDetails)
                 .flatMap(List::stream)

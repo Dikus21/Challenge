@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface UserRepository extends JpaRepository<Users, UUID>, JpaSpecificationExecutor<Users> {
+public interface UsersRepository extends JpaRepository<Users, UUID>, JpaSpecificationExecutor<Users> {
     @Query("select u from Users u WHERE u.id = :idUser")
     public Users getById(@Param("idUser") UUID idUser);
 

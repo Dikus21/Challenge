@@ -1,7 +1,7 @@
 package com.aplikasi.challenge.controller;
 
 import com.aplikasi.challenge.entity.Users;
-import com.aplikasi.challenge.repository.UserRepository;
+import com.aplikasi.challenge.repository.UsersRepository;
 import com.aplikasi.challenge.service.UserService;
 import com.aplikasi.challenge.utils.SimpleStringUtils;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
@@ -24,7 +24,7 @@ public class UserController {
     public UserService userService;
 
     @Autowired
-    public UserRepository userRepository;
+    public UsersRepository usersRepository;
 
     @Autowired
     public SimpleStringUtils simpleStringUtils;
@@ -71,7 +71,7 @@ public class UserController {
                     return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
                 });
 
-        Page<Users> list = userRepository.findAll(spec, showData);
+        Page<Users> list = usersRepository.findAll(spec, showData);
 
         Map map = new HashMap();
         map.put("data",list);
