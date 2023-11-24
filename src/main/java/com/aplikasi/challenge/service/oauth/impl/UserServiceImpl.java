@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
 
             if ((checkUser != null) && (encoder.matches(loginModel.getPassword(), checkUser.getPassword()))) {
                 if (!checkUser.isEnabled()) {
-                    return templateResponse.error("User is not enable, check email");
+                    return templateResponse.error("User is not enable, check your email");
                 }
             }
             if (checkUser == null) {

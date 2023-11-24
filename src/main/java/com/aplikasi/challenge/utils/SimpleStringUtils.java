@@ -47,4 +47,14 @@ public class SimpleStringUtils {
         }
     }
 
+//    public String tokenExtractor(String token) {
+//        Claims claims = Jwts.parser()
+//                .setSigningKey("your-signing-key") // Replace with your actual signing key
+//                .parseClaimsJws(jwtToken)
+//                .getBody();
+//
+//        // Extract the user_name
+//        return claims.get("user_name", String.class)
+//    }
+
 }

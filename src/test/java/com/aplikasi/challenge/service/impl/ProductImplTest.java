@@ -27,7 +27,7 @@ class ProductImplTest {
     private String token;
     @BeforeEach
     void setUp() {
-        token = "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImFkbWluQG1haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTcwMDgwMDA5MiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9TVVBFUlVTRVIiLCJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImVsRDJzWGZDeF9BSm9TWGN3d2xPYlhkUDVFTSIsImNsaWVudF9pZCI6Im15LWNsaWVudC1hcHBzIn0.2_Ox8heE8bJpGqOdu6yWEDEnuYJTqRTbCsrp2XgX6Vs";
+        token = "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImFkbWluQG1haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTcwMDg2MDkwNSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9TVVBFUlVTRVIiLCJST0xFX0FETUlOIl0sImp0aSI6IkxpVW1yNWRIMEFrT2FzcnZSbVBrQWdNTWRETSIsImNsaWVudF9pZCI6Im15LWNsaWVudC1hcHBzIn0.hREzoxjaNo-eTSgQ295_DhrtPYSQCTJLC17j0xpCMFM";
     }
 
     @Test
