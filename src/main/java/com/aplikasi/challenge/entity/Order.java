@@ -1,5 +1,6 @@
 package com.aplikasi.challenge.entity;
 
+import com.aplikasi.challenge.entity.oauth.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
@@ -31,7 +32,7 @@ public class Order extends AbstractDate implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "user_id_constraint"))
-    private Users user;
+    private User user;
 
     //@NotNull(message = "This field cannot be null!")
     private boolean completed = false;

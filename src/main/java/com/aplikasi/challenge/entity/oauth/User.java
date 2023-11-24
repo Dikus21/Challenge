@@ -1,7 +1,11 @@
 package com.aplikasi.challenge.entity.oauth;
 
+import com.aplikasi.challenge.entity.AbstractDate;
+import com.aplikasi.challenge.entity.Merchant;
+import com.aplikasi.challenge.entity.Order;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.Where;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,7 +19,8 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "oauth_user")
-public class User implements UserDetails, Serializable {
+@Where(clause = "deleted_date is null")
+public class User extends AbstractDate implements UserDetails, Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +49,7 @@ public class User implements UserDetails, Serializable {
 
 
     @JsonIgnore
-    private boolean enabled = true;
+    private boolean enabled = false;
 
     @JsonIgnore
     @Column(name = "not_expired")
@@ -57,6 +62,14 @@ public class User implements UserDetails, Serializable {
     @JsonIgnore
     @Column(name = "credential_not_expired")
     private boolean credentialsNonExpired = true;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Order> orders;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_merchant")
+    private Merchant merchant;
 
     @ManyToMany(targetEntity = Role.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(

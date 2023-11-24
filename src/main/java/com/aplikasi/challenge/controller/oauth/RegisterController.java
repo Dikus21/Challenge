@@ -1,9 +1,11 @@
 package com.aplikasi.challenge.controller.oauth;
 
 import com.aplikasi.challenge.config.Config;
+import com.aplikasi.challenge.entity.Merchant;
 import com.aplikasi.challenge.entity.oauth.User;
 import com.aplikasi.challenge.repository.oauth.UserRepository;
 import com.aplikasi.challenge.request.RegisterModel;
+import com.aplikasi.challenge.service.MerchantService;
 import com.aplikasi.challenge.service.email.EmailSender;
 import com.aplikasi.challenge.service.oauth.UserService;
 import com.aplikasi.challenge.utils.EmailTemplate;
@@ -17,10 +19,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/v1/user-register/")
@@ -31,6 +30,8 @@ public class RegisterController {
     public EmailSender emailSender;
     @Autowired
     public EmailTemplate emailTemplate;
+    @Autowired
+    public MerchantService merchantService;
 
     @Value("${expired.token.password.minute:}")//FILE_SHOW_RUL
     private int expiredToken;
@@ -43,7 +44,7 @@ public class RegisterController {
 
     @Autowired
     public TemplateResponse templateResponse;
-    @PostMapping("/register")
+    @PostMapping("/register-user")
     public ResponseEntity<Map> saveRegisterManual(@Valid @RequestBody RegisterModel objModel) throws RuntimeException {
         Map map = new HashMap();
 
@@ -53,6 +54,20 @@ public class RegisterController {
 
         }
         map = serviceReq.registerManual(objModel);
+
+        return new ResponseEntity<Map>(map, HttpStatus.OK);
+    }
+
+    @PostMapping("/register-merchant/{id}")
+    public ResponseEntity<Map> saveRegisterManual(@Valid @RequestBody Merchant objModel, @PathVariable("id") Long id) throws RuntimeException {
+        Map map = new HashMap();
+
+        Optional<User> user = userRepository.findById(id);
+        if (!user.isPresent()) {
+            return new ResponseEntity<Map>(templateResponse.error("User not found"), HttpStatus.OK);
+        } else if (user.get().getMerchant() != null) return new ResponseEntity<Map>(templateResponse.error("Account merchant already exist"), HttpStatus.OK);
+        merchantService.save(objModel);
+        map = serviceReq.registerMerchant(user.get());
 
         return new ResponseEntity<Map>(map, HttpStatus.OK);
     }

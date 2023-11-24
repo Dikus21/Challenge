@@ -160,3 +160,13 @@ t
 Dsrc/main/java/com/aplikasi/challenge/repository/UsersRepository.java,a\2\a2fddfc4972ea116957b710e76b0df4000742f9f
 v
 Fsrc/test/java/com/aplikasi/challenge/service/impl/ProductImplTest.java,6\9\697c473689fb7b33eb176b542eca387ab6808396
+{
+Ksrc/main/java/com/aplikasi/challenge/controller/validation/ApiResponse.java,2\4\24a294d25a229e7cc4cf200724eb2f6daf1e48b8
+„
+Tsrc/main/java/com/aplikasi/challenge/controller/validation/BaseExceptionHandler.java,4\0\40e4b75313356d24868bd7d516c344fa289dcc31
+t
+Dsrc/main/java/com/aplikasi/challenge/request/ResetPasswordModel.java,0\5\05a2d8966cdf7df4d0b7b791625b9902b48e9e95
+|
+Lsrc/main/java/com/aplikasi/challenge/controller/oauth/NewUserController.java,a\4\a44c7579e0d10c02d10b9ed2c11afba647f1b7f7
+n
+>src/main/java/com/aplikasi/challenge/testing/OAuth2Sample.java,c\8\c8d237566d5150674f37b6660ea9258fef900f78

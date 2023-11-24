@@ -47,7 +47,7 @@ public class DatabaseSeeder implements ApplicationRunner {
     private String defaultPassword = "password";
 
     private String[] users = new String[]{
-            "admin@mail.com:ROLE_SUPERUSER ROLE_USER ROLE_ADMIN",
+            "admin@mail.com:ROLE_SUPERUSER ROLE_ADMIN",
             "user@mail.com:ROLE_USER"
     };
 
@@ -57,11 +57,20 @@ public class DatabaseSeeder implements ApplicationRunner {
     };
 
     private String[] roles = new String[] {
+            //default
             "ROLE_SUPERUSER:user_role:^/.*:GET|PUT|POST|PATCH|DELETE|OPTIONS",
             "ROLE_ADMIN:user_role:^/.*:GET|PUT|POST|PATCH|DELETE|OPTIONS",
-            "ROLE_USER:user_role:^/.*:GET|PUT|POST|PATCH|DELETE|OPTIONS",
             "ROLE_READ:oauth_role:^/.*:GET|PUT|POST|PATCH|DELETE|OPTIONS",
-            "ROLE_WRITE:oauth_role:^/.*:GET|PUT|POST|PATCH|DELETE|OPTIONS"
+            "ROLE_WRITE:oauth_role:^/.*:GET|PUT|POST|PATCH|DELETE|OPTIONS",
+
+            //Merchant
+            "ROLE_MERCHANT:user_role:^/v1/merchant/update:PUT",
+            "ROLE_MERCHANT_P:user_role:^/v1/product/(save|update|delete|getById):POST|PUT|DELETE|GET",
+
+            //User
+            "ROLE_USER:user_role:^/v1/user/(update|delete):PUT|DELETE",
+            "ROLE_USER_O:user_role:^/v1/order/(save|update|delete|getById):POST|PUT|DELETE|GET",
+            "ROLE_USER_OD:user_role:^/v1/order_detail/(save|update|delete|getById):POST|PUT|DELETE|GET"
     };
 
 
