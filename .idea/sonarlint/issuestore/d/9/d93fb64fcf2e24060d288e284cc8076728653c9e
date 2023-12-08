@@ -1,0 +1,14 @@
+
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+R
+java:S1874"<Remove this use of "ClientDetailsService"; it is deprecated.(Ö×°¤
+K
+java:S1874"5Remove this use of "ClientDetails"; it is deprecated.(Äè¯
+Y
+java:S1874"CRemove this use of "ClientRegistrationException"; it is deprecated.(Äè¯
+K
+java:S1874"5Remove this use of "ClientDetails"; it is deprecated.(¾ÌÂƒ
+^
+java:S1874"CRemove this use of "ClientRegistrationException"; it is deprecated.(ÌÖÀ–ùÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(éû†™üÿÿÿÿ

@@ -1,0 +1,39 @@
+
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813*"BRemove this field injection and use constructor injection instead.(êæÄÞ
+W
+java:S1874"ARemove this use of "EnableAuthorizationServer"; it is deprecated.(ÀÝ„ë
+g
+java:S1874"LRemove this use of "AuthorizationServerConfigurerAdapter"; it is deprecated.(‘íá ýÿÿÿÿ
+Q
+java:S1874("<Remove this use of "AccessTokenConverter"; it is deprecated.(º›€"
+H
+java:S1874+"2Remove this use of "TokenStore"; it is deprecated.(Ú¹£Ê
+]	java:S125."<This block of commented-out lines of code should be removed.(¤¿•ªþÿÿÿÿ8àžÓ½Ä1
+h
+java:S18744"MRemove this use of "AuthorizationServerSecurityConfigurer"; it is deprecated.(÷¡¤Íùÿÿÿÿ
+a
+java:S1874@"FRemove this use of "ClientDetailsServiceConfigurer"; it is deprecated.(è¡ïéùÿÿÿÿ
+d
+java:S1874H"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(Û£òÊ
+X	java:S125Q"<This block of commented-out lines of code should be removed.(Î³£¦8¹ÝÓ½Ä1
+e
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Þ8ö¹Ô½Ä1
+
+java:S1128"]Remove this unused import 'org.springframework.security.oauth2.provider.token.TokenEnhancer'.(£šÖ°þÿÿÿÿ8ö¹Ô½Ä1
+„
+java:S1128"bRemove this unused import 'org.springframework.security.oauth2.provider.token.TokenEnhancerChain'.(Þ˜¹Úûÿÿÿÿ8ö¹Ô½Ä1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ö¹Ô½Ä1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ö¹Ô½Ä1

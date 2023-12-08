@@ -1,0 +1,71 @@
+
+L
+java:S3740X"/Provide the parametrized type for this generic.(ÊÜ§¸8óï¹ØÃ1
+Q
+java:S3740Y"/Provide the parametrized type for this generic.(ª£’ıÿÿÿÿ8õï¹ØÃ1
+R
+java:S3740„"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ8õï¹ØÃ1
+R
+java:S3740„"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ8õï¹ØÃ1
+R
+java:S3740¡"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ8õï¹ØÃ1
+R
+java:S3740¡"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ8õï¹ØÃ1
+R
+java:S3740µ"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ8õï¹ØÃ1
+R
+java:S3740µ"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ8õï¹ØÃ1
+s
+java:S1192š"UDefine a constant instead of duplicating this literal "Eror registerManual=" 3 times.(ôÎˆğ8õï¹ØÃ1
+i
+java:S1192›"FDefine a constant instead of duplicating this literal "eror:" 3 times.(ôÈ±¢üÿÿÿÿ8õï¹ØÃ1
+m
+java:S1192Î"ODefine a constant instead of duplicating this literal "Id is required" 3 times.(ŒñÀ¹8õï¹ØÃ1
+L
+java:S1066I"/Merge this if statement with the enclosing one.(ù‚œ¿8öï¹ØÃ1
+h
+java:S2259k"FA "NullPointerException" could be thrown; "getBody()" can return null.(†ìµ—ûÿÿÿÿ8£ğ¹ØÃ1
+h
+java:S2259j"FA "NullPointerException" could be thrown; "getBody()" can return null.(¼°µ¼úÿÿÿÿ8£ğ¹ØÃ1
+c
+java:S2259i"FA "NullPointerException" could be thrown; "getBody()" can return null.(öØéµ8£ğ¹ØÃ1
+c
+java:S2259l"FA "NullPointerException" could be thrown; "getBody()" can return null.(Ÿ¸ì8£ğ¹ØÃ1
+h
+java:S2259m"FA "NullPointerException" could be thrown; "getBody()" can return null.(ŞâÿÜúÿÿÿÿ8£ğ¹ØÃ1
+c
+java:S2259h"FA "NullPointerException" could be thrown; "getBody()" can return null.(»î©÷8£ğ¹ØÃ1
+\
+java:S3655¦">Call "checkDataDBUser.isPresent()" before accessing the value.(ı°ÌÍ8£ğ¹ØÃ1
+_
+java:S6813*"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤ğ¹ØÃ1
+_
+java:S6813,"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤ğ¹ØÃ1
+_
+java:S6813."BRemove this field injection and use constructor injection instead.(êæÄŞ8¤ğ¹ØÃ1
+_
+java:S68131"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤ğ¹ØÃ1
+_
+java:S68133"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤ğ¹ØÃ1
+_
+java:S68136"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤ğ¹ØÃ1
+_
+java:S68138"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤ğ¹ØÃ1
+_
+java:S6813:"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤ğ¹ØÃ1
+X	java:S125d"<This block of commented-out lines of code should be removed.(ïëÏŠ8óğ¹ØÃ1
+Z
+java:S1854„"7Remove this useless assignment to local variable "map".(™Ş­Ôşÿÿÿÿ8ôğ¹ØÃ1
+K
+java:S1481„"(Remove this unused "map" local variable.(™Ş­Ôşÿÿÿÿ8õğ¹ØÃ1
+Z
+java:S1854¡"7Remove this useless assignment to local variable "map".(™Ş­Ôşÿÿÿÿ8÷ğ¹ØÃ1
+K
+java:S1481¡"(Remove this unused "map" local variable.(™Ş­Ôşÿÿÿÿ8÷ğ¹ØÃ1
+Z
+java:S1854µ"7Remove this useless assignment to local variable "map".(™Ş­Ôşÿÿÿÿ8øğ¹ØÃ1
+K
+java:S1481µ"(Remove this unused "map" local variable.(™Ş­Ôşÿÿÿÿ8øğ¹ØÃ1
+Y	java:S125‚"<This block of commented-out lines of code should be removed.(ª×§ô8ë‘õØÃ1
+M
+java:S1874Œ"/Remove this use of "isEmpty"; it is deprecated.(É¿£Ô8ığ¹ØÃ1

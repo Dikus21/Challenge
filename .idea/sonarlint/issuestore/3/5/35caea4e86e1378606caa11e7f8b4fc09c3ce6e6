@@ -1,0 +1,27 @@
+
+D
+java:S1121(".Extract the assignment out of this expression.(÷°–
+I
+java:S1121*".Extract the assignment out of this expression.(©•¬øÿÿÿÿ
+D
+java:S1121-".Extract the assignment out of this expression.(÷°–
+C
+java:S11211".Extract the assignment out of this expression.(÷ü‰
+f	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÔŒ›
+
+java:S14887"_Immediately return this expression instead of assigning it to the temporary variable "strDate".(Ñˆƒùÿÿÿÿ8ÙÑœĞÃ1
+4
+java:S2119"Save and re-use this "Random".(–áÍÈ
+.
+java:S2140"Use "nextInt()" instead.(†¥Œ
+S
+java:S1854("=Remove this useless assignment to local variable "show_data".(÷°–
+X
+java:S1854*"=Remove this useless assignment to local variable "show_data".(©•¬øÿÿÿÿ
+S
+java:S1854-"=Remove this useless assignment to local variable "show_data".(÷°–
+R
+java:S18541"=Remove this useless assignment to local variable "show_data".(÷ü‰
+D
+java:S1481$".Remove this unused "show_data" local variable.(ïÔŒ›
+V	java:S125;"<This block of commented-out lines of code should be removed.(Î÷îŒıÿÿÿÿ

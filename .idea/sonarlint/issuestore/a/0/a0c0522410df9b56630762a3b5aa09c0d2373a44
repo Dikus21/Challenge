@@ -1,0 +1,76 @@
+
+J
+java:S3740E"/Provide the parametrized type for this generic.(ğ«›Æùÿÿÿÿ
+J
+java:S3740F"/Provide the parametrized type for this generic.(œ¡ªøÿÿÿÿ
+D
+java:S3740G"/Provide the parametrized type for this generic.(Ìá]
+J
+java:S3740L"/Provide the parametrized type for this generic.(¡Ş‚¿ùÿÿÿÿ
+E
+java:S3740P"/Provide the parametrized type for this generic.(¯£öº
+E
+java:S3740b"/Provide the parametrized type for this generic.(´‰‘ú
+J
+java:S3740j"/Provide the parametrized type for this generic.(äŠıüÿÿÿÿ
+E
+java:S3740y"/Provide the parametrized type for this generic.(§ÆÆØ
+J
+java:S3740z"/Provide the parametrized type for this generic.(Ş¤”Àúÿÿÿÿ
+K
+java:S3740"/Provide the parametrized type for this generic.(ß‡—ÿÿÿÿÿ
+F
+java:S3740‘"/Provide the parametrized type for this generic.(«»®ö
+K
+java:S3740“"/Provide the parametrized type for this generic.(îãŒ¢ÿÿÿÿÿ
+n
+java:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìá]
+o
+java:S2293P"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯£öº
+o
+java:S2293b"YReplace the type specification in this constructor call with the diamond operator ("<>").(´‰‘ú
+t
+java:S2293j"YReplace the type specification in this constructor call with the diamond operator ("<>").(äŠıüÿÿÿÿ
+u
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ß‡—ÿÿÿÿÿ
+p
+java:S2293‘"YReplace the type specification in this constructor call with the diamond operator ("<>").(«»®ö
+u
+java:S2293“"YReplace the type specification in this constructor call with the diamond operator ("<>").(îãŒ¢ÿÿÿÿÿ
+b
+java:S2259€"FA "NullPointerException" could be thrown; "getBody()" can return null.(•ö§šüÿÿÿÿ
+]
+java:S2259ƒ"FA "NullPointerException" could be thrown; "getBody()" can return null.(£‡æò
+b
+java:S2259"FA "NullPointerException" could be thrown; "getBody()" can return null.(”ê›úûÿÿÿÿ
+b
+java:S2259„"FA "NullPointerException" could be thrown; "getBody()" can return null.(àìÀíÿÿÿÿÿ
+a
+java:S2259"FA "NullPointerException" could be thrown; "getBody()" can return null.(ÉÚÔ„úÿÿÿÿ
+b
+java:S2259‚"FA "NullPointerException" could be thrown; "getBody()" can return null.(¸æıøıÿÿÿÿ
+g	java:S1164"RRename this field "BASEURL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×£ºÇ
+g	java:S116:"RRename this field "AUTHURL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªáÈ×
+l	java:S116@"RRename this field "APPNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñü¸ıÿÿÿÿ
+X
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S68130"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S68136"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813<"BRemove this field injection and use constructor injection instead.(êæÄŞ
+J
+java:S1874O"/Remove this use of "isEmpty"; it is deprecated.(Ûòç¤ÿÿÿÿÿ
+E	java:S106V"+Replace this use of System.out by a logger.(•æöÜúÿÿÿÿ
+L
+java:S1874Y"6Remove this use of "JacksonFactory"; it is deprecated.(¤·í©
+Q
+java:S6437n"6Revoke and change this password, as it is compromised.(ÆºÔÄıÿÿÿÿ
+@	java:S106o"+Replace this use of System.out by a logger.(Êš•ñ
+Q
+java:S6437p"6Revoke and change this password, as it is compromised.(´š„­şÿÿÿÿ
+A	java:S106ˆ"+Replace this use of System.out by a logger.(ğ¿¬Ñ
+R	java:S125Š"<This block of commented-out lines of code should be removed.(ğ‡¤à

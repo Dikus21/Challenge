@@ -1,0 +1,23 @@
+
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+^
+java:S1874"ARemove this use of "EnableAuthorizationServer"; it is deprecated.(Àİ„ë8¤‹şÃ1
+n
+java:S1874"LRemove this use of "AuthorizationServerConfigurerAdapter"; it is deprecated.(‘íá ıÿÿÿÿ8¤‹şÃ1
+X
+java:S1874"<Remove this use of "AccessTokenConverter"; it is deprecated.(º›€"8¤‹şÃ1
+O
+java:S1874"2Remove this use of "TokenStore"; it is deprecated.(Ú¹£Ê8¤‹şÃ1
+o
+java:S1874#"MRemove this use of "AuthorizationServerSecurityConfigurer"; it is deprecated.(÷¡¤Íùÿÿÿÿ8¥‹şÃ1
+k
+java:S1874/"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(Û£òÊ8¦‹şÃ1
+Ÿ
+java:S1128"}Remove this unused import 'org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer'.(ˆ¨¦Ôÿÿÿÿÿ8ÉÓşÃ1

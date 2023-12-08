@@ -1,0 +1,28 @@
+==========================
+BinarFud
+==========================
+
+Terima kasih sudah memesan
+di BinarFud
+
+Dibawah ini adalah pesanan anda
+
+Nasi Goreng      99    1.485.000
+Mie Goreng       99    1.287.000
+Nasi + Ayam      99    1.782.000
+Es Teh Manis     99      297.000
+Es Jeruk         99      495.000
+---------------------------------+
+SubTotal        495    5.346.000
+PPN 10%                  534.600
+---------------------------------+
+Total                  5.880.600
+
+Pembayaran : BinarCash
+14/09/2023
+00:48:54
+
+==========================
+Simpan struk ini sebagai
+bukti pembayaran
+==========================

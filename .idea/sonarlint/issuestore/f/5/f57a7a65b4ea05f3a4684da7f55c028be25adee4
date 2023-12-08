@@ -1,0 +1,11 @@
+
+R
+java:S1874
+"<Remove this use of "EnableResourceServer"; it is deprecated.(¦‰ÆÈ
+]
+java:S1874"GRemove this use of "ResourceServerConfigurerAdapter"; it is deprecated.(Õ§ùˆ
+C
+java:S1185"(Remove this method to simply inherit it.(ìıö‘ùÿÿÿÿ
+c
+java:S1874"HRemove this use of "ResourceServerSecurityConfigurer"; it is deprecated.(ìıö‘ùÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(®‰‰Èùÿÿÿÿ

@@ -1,0 +1,108 @@
+
+g	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(´¥À„üÿÿÿÿ8—“¥Ä1
+b	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(«£–¾8—“¥Ä1
+g	java:S112L"FDefine and throw a dedicated exception instead of using a generic one.(Äğ™Îøÿÿÿÿ8—“¥Ä1
+c	java:S112ƒ"FDefine and throw a dedicated exception instead of using a generic one.(ƒÓÂ²8—“¥Ä1
+J
+java:S37400"/Provide the parametrized type for this generic.(´¥À„üÿÿÿÿ
+J
+java:S37401"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ
+J
+java:S37401"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ
+J
+java:S37405"/Provide the parametrized type for this generic.(ğ»„¥úÿÿÿÿ
+D
+java:S3740:"/Provide the parametrized type for this generic.(Ìá]
+E
+java:S3740>"/Provide the parametrized type for this generic.(«£–¾
+J
+java:S3740?"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ
+J
+java:S3740?"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ
+J
+java:S3740C"/Provide the parametrized type for this generic.(ŞØ‘Šúÿÿÿÿ
+J
+java:S3740D"/Provide the parametrized type for this generic.(ºû€®ıÿÿÿÿ
+D
+java:S3740H"/Provide the parametrized type for this generic.(Ìá]
+J
+java:S3740L"/Provide the parametrized type for this generic.(Äğ™Îøÿÿÿÿ
+J
+java:S3740M"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ
+J
+java:S3740M"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ
+J
+java:S3740Q"/Provide the parametrized type for this generic.(ğ»„¥úÿÿÿÿ
+D
+java:S3740V"/Provide the parametrized type for this generic.(² öN
+J
+java:S3740W"/Provide the parametrized type for this generic.(•·øŸùÿÿÿÿ
+J
+java:S3740_"/Provide the parametrized type for this generic.(õòßÇûÿÿÿÿ
+F
+java:S3740ƒ"/Provide the parametrized type for this generic.(ƒÓÂ²
+F
+java:S3740‰"/Provide the parametrized type for this generic.(¡“›“
+K
+java:S3740"/Provide the parametrized type for this generic.(ò´¦õşÿÿÿÿ
+K
+java:S3740”"/Provide the parametrized type for this generic.(í”ğ±ÿÿÿÿÿ
+K
+java:S3740š"/Provide the parametrized type for this generic.(âå¥€şÿÿÿÿ
+t
+java:S22935"YReplace the type specification in this constructor call with the diamond operator ("<>").(ğ»„¥úÿÿÿÿ
+n
+java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìá]
+t
+java:S2293C"YReplace the type specification in this constructor call with the diamond operator ("<>").(ŞØ‘Šúÿÿÿÿ
+t
+java:S2293D"YReplace the type specification in this constructor call with the diamond operator ("<>").(ºû€®ıÿÿÿÿ
+n
+java:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìá]
+t
+java:S2293Q"YReplace the type specification in this constructor call with the diamond operator ("<>").(ğ»„¥úÿÿÿÿ
+t
+java:S2293W"YReplace the type specification in this constructor call with the diamond operator ("<>").(•·øŸùÿÿÿÿ
+p
+java:S2293‰"YReplace the type specification in this constructor call with the diamond operator ("<>").(¡“›“
+u
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ò´¦õşÿÿÿÿ
+u
+java:S2293”"YReplace the type specification in this constructor call with the diamond operator ("<>").(í”ğ±ÿÿÿÿÿ
+u
+java:S2293š"YReplace the type specification in this constructor call with the diamond operator ("<>").(âå¥€şÿÿÿÿ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813*"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813-"BRemove this field injection and use constructor injection instead.(êæÄŞ
+R
+java:S18541"7Remove this useless assignment to local variable "map".(™Ş­Ôşÿÿÿÿ
+R
+java:S1854?"7Remove this useless assignment to local variable "map".(™Ş­Ôşÿÿÿÿ
+]
+java:S4684>"@Replace this persistent entity with a simple POJO or DTO object.(«£–¾8»“¥Ä1
+R
+java:S1854M"7Remove this useless assignment to local variable "map".(™Ş­Ôşÿÿÿÿ
+M
+java:S1854T"7Remove this useless assignment to local variable "map".(ğÂ¡Î
+C
+java:S1481M"(Remove this unused "map" local variable.(™Ş­Ôşÿÿÿÿ
+Q	java:S125e"<This block of commented-out lines of code should be removed.(¿ÇÏ
+E
+java:S1874h"/Remove this use of "isEmpty"; it is deprecated.(Šğı¾
+c
+java:S5361w"HReplace this call to "replaceAll()" by a call to the "replace()" method.(½ÍùØøÿÿÿÿ
+]
+java:S5361x"HReplace this call to "replaceAll()" by a call to the "replace()" method.(´§Ú;
+c
+java:S5361{"HReplace this call to "replaceAll()" by a call to the "replace()" method.(½ÍùØøÿÿÿÿ
+c
+java:S5361|"HReplace this call to "replaceAll()" by a call to the "replace()" method.(™´ÿóşÿÿÿÿ

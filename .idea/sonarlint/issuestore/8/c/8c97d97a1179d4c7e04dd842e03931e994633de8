@@ -1,0 +1,27 @@
+
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8’ÎØÃ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8’ÎØÃ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8’ÎØÃ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8’ÎØÃ1
+_
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ8’ÎØÃ1
+_
+java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄŞ8’ÎØÃ1
+^
+java:S1874"ARemove this use of "EnableAuthorizationServer"; it is deprecated.(Àİ„ë8’ÎØÃ1
+n
+java:S1874"LRemove this use of "AuthorizationServerConfigurerAdapter"; it is deprecated.(‘íá ıÿÿÿÿ8“ÎØÃ1
+X
+java:S1874""<Remove this use of "AccessTokenConverter"; it is deprecated.(º›€"8“ÎØÃ1
+O
+java:S1874%"2Remove this use of "TokenStore"; it is deprecated.(Ú¹£Ê8“ÎØÃ1
+o
+java:S1874+"MRemove this use of "AuthorizationServerSecurityConfigurer"; it is deprecated.(÷¡¤Íùÿÿÿÿ8”ÎØÃ1
+h
+java:S18747"FRemove this use of "ClientDetailsServiceConfigurer"; it is deprecated.(è¡ïéùÿÿÿÿ8”ÎØÃ1
+k
+java:S1874?"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(Û£òÊ8•ÎØÃ1

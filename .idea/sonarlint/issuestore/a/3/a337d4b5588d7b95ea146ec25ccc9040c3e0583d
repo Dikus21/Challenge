@@ -1,0 +1,29 @@
+
+_
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8êŠ§şÃ1
+x
+java:S3305'"[Inject this field value directly into "accessTokenConverter", the only method that uses it.(ê‹ˆ8êŠ§şÃ1
+_
+java:S1874"DRemove this use of "WebSecurityConfigurerAdapter"; it is deprecated.(ßƒ€Œùÿÿÿÿ
+O
+java:S18745"2Remove this use of "TokenStore"; it is deprecated.(ŠÆì8¼Ò¦şÃ1
+W
+java:S18747"5Remove this use of "JwtTokenStore"; it is deprecated.(ÑŞ”øÿÿÿÿ8½Ò¦şÃ1
+a
+java:S18747"?Remove this use of "JwtAccessTokenConverter"; it is deprecated.(ÑŞ”øÿÿÿÿ8½Ò¦şÃ1
+\
+java:S18749":Remove this use of "InMemoryTokenStore"; it is deprecated.(Æà…„üÿÿÿÿ8¾Ò¦şÃ1
+X
+java:S1874="<Remove this use of "AccessTokenConverter"; it is deprecated.(¢à¯f8¾Ò¦şÃ1
+\
+java:S1874?"?Remove this use of "JwtAccessTokenConverter"; it is deprecated.(‘ö¨Ø8¾Ò¦şÃ1
+\
+java:S1874?"?Remove this use of "JwtAccessTokenConverter"; it is deprecated.(‘ö¨Ø8¾Ò¦şÃ1
+e
+java:S1874F"CRemove this use of "DefaultAccessTokenConverter"; it is deprecated.(¸¾úÿÿÿÿ8¾Ò¦şÃ1
+Y
+java:S1874K"<Remove this use of "DefaultTokenServices"; it is deprecated.(ïãÚ®8¾Ò¦şÃ1
+^
+java:S1874L"<Remove this use of "DefaultTokenServices"; it is deprecated.(¾¶ç¥üÿÿÿÿ8¾Ò¦şÃ1
+^
+java:S1874L"<Remove this use of "DefaultTokenServices"; it is deprecated.(¾¶ç¥üÿÿÿÿ8¿Ò¦şÃ1

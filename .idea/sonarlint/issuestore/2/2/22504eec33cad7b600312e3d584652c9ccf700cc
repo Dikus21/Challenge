@@ -1,0 +1,11 @@
+
+m
+java:S1192R"KDefine a constant instead of duplicating this literal "merchantId" 3 times.(¹ëµøÿÿÿÿ8çÄçÇÄ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8íÄçÇÄ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8îÄçÇÄ1
+_
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8îÄçÇÄ1
+^	java:S125Ä"<This block of commented-out lines of code should be removed.(Æ½ÈÚüÿÿÿÿ8÷ÄçÇÄ1
+Y	java:S125Ì"<This block of commented-out lines of code should be removed.(²¼Ú8÷ÄçÇÄ1

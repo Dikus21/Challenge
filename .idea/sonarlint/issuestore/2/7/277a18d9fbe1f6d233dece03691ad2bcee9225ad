@@ -1,0 +1,55 @@
+
+J
+java:S37408"/Provide the parametrized type for this generic.(ˆ§‡üşÿÿÿÿ
+E
+java:S37409"/Provide the parametrized type for this generic.(¼Ğî¾
+E
+java:S3740="/Provide the parametrized type for this generic.(Şïä
+J
+java:S3740>"/Provide the parametrized type for this generic.(ÕØÚ“üÿÿÿÿ
+E
+java:S3740B"/Provide the parametrized type for this generic.(Ä û
+J
+java:S3740G"/Provide the parametrized type for this generic.(õìßùÿÿÿÿ
+J
+java:S3740L"/Provide the parametrized type for this generic.(öÇïªÿÿÿÿÿ
+D
+java:S3740Q"/Provide the parametrized type for this generic.(ÏÙê`
+J
+java:S3740n"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ
+J
+java:S3740n"/Provide the parametrized type for this generic.(™Ş­Ôşÿÿÿÿ
+J
+java:S3740p"/Provide the parametrized type for this generic.(ş¾õ¢şÿÿÿÿ
+E
+java:S3740{"/Provide the parametrized type for this generic.(³´«ü
+o
+java:S22939"YReplace the type specification in this constructor call with the diamond operator ("<>").(¼Ğî¾
+t
+java:S2293>"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÕØÚ“üÿÿÿÿ
+t
+java:S2293p"YReplace the type specification in this constructor call with the diamond operator ("<>").(ş¾õ¢şÿÿÿÿ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄŞ
+[
+java:S4684("@Replace this persistent entity with a simple POJO or DTO object.(œšèªøÿÿÿÿ
+A
+java:S1452("&Remove usage of generic wildcard type.(œšèªøÿÿÿÿ
+[
+java:S46848"@Replace this persistent entity with a simple POJO or DTO object.(ˆ§‡üşÿÿÿÿ
+V
+java:S4684="@Replace this persistent entity with a simple POJO or DTO object.(Şïä
+V
+java:S4684B"@Replace this persistent entity with a simple POJO or DTO object.(Ä û
+[
+java:S4684L"@Replace this persistent entity with a simple POJO or DTO object.(öÇïªÿÿÿÿÿ
+H
+java:S6814W"2Convert this optional parameter to an Object type.(õò•
+V	java:S125b"<This block of commented-out lines of code should be removed.(Ö¼ãöøÿÿÿÿ
+V	java:S125s"<This block of commented-out lines of code should be removed.(²ÆëÆûÿÿÿÿ
