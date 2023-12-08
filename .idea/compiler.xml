@@ -10,6 +10,7 @@
         <module name="merchant" />
         <module name="Challenge_1" />
         <module name="user" />
+        <module name="demo" />
         <module name="order" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Challenge_1" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="merchant" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="user" options="-parameters" />

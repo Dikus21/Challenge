@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/Challenge_7/user/pom.xml" />
         <option value="$PROJECT_DIR$/Challenge_7/order/pom.xml" />
         <option value="$PROJECT_DIR$/Challenge_7/merchant/pom.xml" />
+        <option value="$PROJECT_DIR$/Challenge_7/gateaway/pom.xml" />
       </list>
     </option>
   </component>

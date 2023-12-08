@@ -281,3 +281,9 @@ e
 5Challenge_6/src/main/resources/application.properties,e\a\eac30322e6d1da7f12923b1a887a2b17d28f4432
 Ä
 PChallenge_7/merchant/src/main/java/com/example/merchant/MerchantApplication.java,0\5\05d3674791ef8591bfb745ca9a3a315b0338e247
+L
+Challenge_7/gateaway/pom.xml,7\0\70f706a7ae1fd8640adcf0b19136751b86243574
+x
+HChallenge_7/gateaway/src/main/java/com/example/demo/DemoApplication.java,8\b\8b65355ae67ab4e2f38883ffd1ee0c7fa7789f45
+Å
+QChallenge_7/gateaway/src/main/java/com/example/demo/config/SpringCloudConfig.java,b\a\ba5b5cf32a4141907fe1f32c505a063206537891
