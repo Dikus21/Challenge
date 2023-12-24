@@ -1,14 +1,0 @@
-
-L
-java:S3740C"/Provide the parametrized type for this generic.(ÊÜ§¸8ı°Î¡Ä1
-Q
-java:S3740D"/Provide the parametrized type for this generic.(Ş¤”Àúÿÿÿÿ8ı°Î¡Ä1
-h
-java:S2259E"FA "NullPointerException" could be thrown; "getBody()" can return null.(ßçİ†ÿÿÿÿÿ8‡±Î¡Ä1
-v	java:S116"URename this field "SECRET_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Âßíÿÿÿÿÿ8ˆ±Î¡Ä1
-C
-java:S1170"!Make this final field static too.(’Âßíÿÿÿÿÿ8ˆ±Î¡Ä1
-
-java:S1186L"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ø‰ºš8Ö„¢Ä1
-_
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8ˆ±Î¡Ä1

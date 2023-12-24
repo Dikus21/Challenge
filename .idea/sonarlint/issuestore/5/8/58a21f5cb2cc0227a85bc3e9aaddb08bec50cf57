@@ -1,39 +1,41 @@
 
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô‹‹èÇ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô‹‹èÇ1
+_
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô‹‹èÇ1
+_
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô‹‹èÇ1
+_
+java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô‹‹èÇ1
+_
+java:S6813+"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô‹‹èÇ1
+_
+java:S6813."BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô‹‹èÇ1
+v
+java:S3305/"YInject this field value directly into "tokenEnhancerChain", the only method that uses it.(ö›Õƒ8Ö‹‹èÇ1
+^
+java:S1874"ARemove this use of "EnableAuthorizationServer"; it is deprecated.(Àİ„ë8Ø‹‹èÇ1
+n
+java:S1874"LRemove this use of "AuthorizationServerConfigurerAdapter"; it is deprecated.(‘íá ıÿÿÿÿ8Ø‹‹èÇ1
 X
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
-X
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
-X
-java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ
-X
-java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄŞ
-X
-java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ
-X
-java:S6813*"BRemove this field injection and use constructor injection instead.(êæÄŞ
-W
-java:S1874"ARemove this use of "EnableAuthorizationServer"; it is deprecated.(Àİ„ë
-g
-java:S1874"LRemove this use of "AuthorizationServerConfigurerAdapter"; it is deprecated.(‘íá ıÿÿÿÿ
-Q
-java:S1874("<Remove this use of "AccessTokenConverter"; it is deprecated.(º›€"
-H
-java:S1874+"2Remove this use of "TokenStore"; it is deprecated.(Ú¹£Ê
-]	java:S125."<This block of commented-out lines of code should be removed.(¤¿•ªşÿÿÿÿ8àÓ½Ä1
+java:S1874)"<Remove this use of "AccessTokenConverter"; it is deprecated.(º›€"8Ù‹‹èÇ1
+O
+java:S1874,"2Remove this use of "TokenStore"; it is deprecated.(Ú¹£Ê8Ù‹‹èÇ1
+o
+java:S18745"MRemove this use of "AuthorizationServerSecurityConfigurer"; it is deprecated.(÷¡¤Íùÿÿÿÿ8Ú‹‹èÇ1
 h
-java:S18744"MRemove this use of "AuthorizationServerSecurityConfigurer"; it is deprecated.(÷¡¤Íùÿÿÿÿ
-a
-java:S1874@"FRemove this use of "ClientDetailsServiceConfigurer"; it is deprecated.(è¡ïéùÿÿÿÿ
-d
-java:S1874H"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(Û£òÊ
-X	java:S125Q"<This block of commented-out lines of code should be removed.(Î³£¦8¹İÓ½Ä1
-e
-java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş8ö¹Ô½Ä1
-
-java:S1128"]Remove this unused import 'org.springframework.security.oauth2.provider.token.TokenEnhancer'.(£šÖ°şÿÿÿÿ8ö¹Ô½Ä1
-„
-java:S1128"bRemove this unused import 'org.springframework.security.oauth2.provider.token.TokenEnhancerChain'.(Ş˜¹Úûÿÿÿÿ8ö¹Ô½Ä1
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ö¹Ô½Ä1
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ö¹Ô½Ä1
+java:S1874A"FRemove this use of "ClientDetailsServiceConfigurer"; it is deprecated.(è¡ïéùÿÿÿÿ8Û‹‹èÇ1
+k
+java:S1874I"NRemove this use of "AuthorizationServerEndpointsConfigurer"; it is deprecated.(Û£òÊ8Ü‹‹èÇ1
+V
+java:S1874R":Remove this use of "TokenEnhancerChain"; it is deprecated.(˜­œz8Ü‹‹èÇ1
+W
+java:S1874S":Remove this use of "TokenEnhancerChain"; it is deprecated.(òÍ·®8İ‹‹èÇ1
+W
+java:S1874S":Remove this use of "TokenEnhancerChain"; it is deprecated.(òÍ·®8İ‹‹èÇ1
+R
+java:S1874T"5Remove this use of "TokenEnhancer"; it is deprecated.(¢Ë¥Æ8İ‹‹èÇ1
+W
+java:S1874W"5Remove this use of "TokenEnhancer"; it is deprecated.(›ûˆÖøÿÿÿÿ8Ş‹‹èÇ1

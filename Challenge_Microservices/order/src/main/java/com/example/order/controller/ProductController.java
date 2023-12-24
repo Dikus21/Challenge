@@ -1,0 +1,100 @@
+package com.example.order.controller;
+
+import com.example.order.entity.Product;
+import com.example.order.repository.ProductRepository;
+import com.example.order.service.ProductService;
+import com.example.order.utils.SimpleStringUtils;
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+import javax.persistence.criteria.Predicate;
+import java.util.*;
+
+@RestController
+@RequestMapping("/v1/product")
+public class ProductController {
+    @Autowired
+    public ProductService productService;
+
+    @Autowired
+    public ProductRepository productRepository;
+
+    @Autowired
+    public SimpleStringUtils simpleStringUtils;
+
+    @PreAuthorize("hasROLE('ROLE_MERCHANT_P')")
+    @PostMapping(value = {"/save", "/save/"})
+    public ResponseEntity<Map> save(@RequestBody Product request) {
+        return new ResponseEntity<Map>(productService.save(request), HttpStatus.OK);
+    }
+
+    @PreAuthorize("hasROLE('ROLE_MERCHANT_P')")
+    @PutMapping(value = {"/update", "/update/"})
+    public ResponseEntity<Map> update(@RequestBody Product request) {
+        return new ResponseEntity<Map>(productService.update(request), HttpStatus.OK);
+    }
+
+    @PreAuthorize("hasROLE('ROLE_MERCHANT_P')")
+    @DeleteMapping(value = {"/delete", "/delete/"})
+    public ResponseEntity<Map> delete(@RequestBody Product request) {
+        return new ResponseEntity<>(productService.delete(request), HttpStatus.OK);
+    }
+
+    @PreAuthorize("hasROLE('ROLE_MERCHANT_P')")
+    @GetMapping(value = {"/{id}", "/{id}/"})
+    public ResponseEntity<Map> getById(@PathVariable("id") UUID id) {
+        return new ResponseEntity<>(productService.getById(id), HttpStatus.OK);
+    }
+
+    @GetMapping(value = {"/list", "/list/"})
+    public ResponseEntity<Map> listQuizHeaderSpec(
+            @RequestParam() Integer page,
+            @RequestParam(required = true) Integer size,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String price,
+//            @RequestParam(required = false) Merchant merchant,
+            @RequestParam(required = false) String orderby,
+            @RequestParam(required = false) String ordertype) {
+        Pageable showData = simpleStringUtils.getShort(orderby, ordertype, page, size);
+
+        Specification<Product> spec =
+                ((root, query, criteriaBuilder) -> {
+                    List<Predicate> predicates = new ArrayList<>();
+                    if (name != null && !name.isEmpty()) {
+                        predicates.add(criteriaBuilder.like(criteriaBuilder.lower(root.get("name")), "%" + name.toLowerCase() + "%"));
+                    }
+                    if (price != null && !price.isEmpty()) {
+                        predicates.add(criteriaBuilder.equal(root.get("price"), price));
+                    }
+//                    if (merchant != null) {
+//                        predicates.add(criteriaBuilder.like(criteriaBuilder.lower(root.get("merchant.name")), "%" + merchant.getName().toLowerCase() + "%"));
+//                    }
+                    return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
+                });
+
+        Page<Product> list = productRepository.findAll(spec, showData);
+
+        Map map = new HashMap();
+        map.put("data",list);
+        return new ResponseEntity<Map>(map, new HttpHeaders(), HttpStatus.OK);
+    }
+
+    @ExceptionHandler(InvalidFormatException.class)
+    public ResponseEntity<Map> invalidFormatHandler(InvalidFormatException e) {
+        Map<Object, Object> map = new HashMap<>();
+        if (e.getTargetType().equals(UUID.class)) {
+            map.put("ERROR", "Invalid UUID format provided in JSON");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(map);
+        }
+        map.put("ERROR", "Invalid data format");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(map);
+    }
+}

@@ -37,18 +37,18 @@ w
 java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(«»®ö8ËŠİéÃ1
 |
 java:S2293‘"YReplace the type specification in this constructor call with the diamond operator ("<>").(îãŒ¢ÿÿÿÿÿ8ËŠİéÃ1
-d
-java:S2259"FA "NullPointerException" could be thrown; "getBody()" can return null.(£‡æò8ØŠİéÃ1
-i
-java:S2259€"FA "NullPointerException" could be thrown; "getBody()" can return null.(¸æıøıÿÿÿÿ8ØŠİéÃ1
-h
-java:S2259}"FA "NullPointerException" could be thrown; "getBody()" can return null.(ÉÚÔ„úÿÿÿÿ8ØŠİéÃ1
-h
-java:S2259"FA "NullPointerException" could be thrown; "getBody()" can return null.(”ê›úûÿÿÿÿ8ØŠİéÃ1
 i
 java:S2259‚"FA "NullPointerException" could be thrown; "getBody()" can return null.(àìÀíÿÿÿÿÿ8ØŠİéÃ1
 h
+java:S2259"FA "NullPointerException" could be thrown; "getBody()" can return null.(”ê›úûÿÿÿÿ8ØŠİéÃ1
+h
+java:S2259}"FA "NullPointerException" could be thrown; "getBody()" can return null.(ÉÚÔ„úÿÿÿÿ8ØŠİéÃ1
+h
 java:S2259~"FA "NullPointerException" could be thrown; "getBody()" can return null.(•ö§šüÿÿÿÿ8ØŠİéÃ1
+i
+java:S2259€"FA "NullPointerException" could be thrown; "getBody()" can return null.(¸æıøıÿÿÿÿ8ØŠİéÃ1
+d
+java:S2259"FA "NullPointerException" could be thrown; "getBody()" can return null.(£‡æò8ØŠİéÃ1
 n	java:S1161"RRename this field "BASEURL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×£ºÇ8ØŠİéÃ1
 n	java:S1167"RRename this field "AUTHURL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªáÈ×8ØŠİéÃ1
 s	java:S116="RRename this field "APPNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñü¸ıÿÿÿÿ8ØŠİéÃ1
@@ -62,6 +62,8 @@ _
 java:S68133"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÙŠİéÃ1
 _
 java:S68139"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÙŠİéÃ1
+P
+java:S6837I"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8Š¼¤íÇ1
 Q
 java:S1874M"/Remove this use of "isEmpty"; it is deprecated.(Ûòç¤ÿÿÿÿÿ8ÜŠİéÃ1
 L	java:S106T"+Replace this use of System.out by a logger.(•æöÜúÿÿÿÿ8ÜŠİéÃ1

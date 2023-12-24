@@ -1,0 +1,15 @@
+package com.example.merchant;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MerchantApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MerchantApplication.class, args);
+		java.sql.Driver d = new org.postgresql.Driver();
+		System.out.println(d.getMajorVersion() + "." + d.getMinorVersion());
+	}
+
+}

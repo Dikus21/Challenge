@@ -1,6 +1,8 @@
 
 <
 java:S1170"!Make this final field static too.(—‘œ‚øÿÿÿÿ
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ýÅøÌÄ1
 \
 java:S1075"ARefactor your code to get this URI from a customizable parameter.(—‘œ‚øÿÿÿÿ
 V	java:S125@"<This block of commented-out lines of code should be removed.(¾ú’ýÿÿÿÿ
