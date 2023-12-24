@@ -1,17 +1,0 @@
-
-_
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8ÅÍ»Æ1
-_
-java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÅÍ»Æ1
-_
-java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÅÍ»Æ1
-_
-java:S6813)"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÅÍ»Æ1
-_
-java:S6813,"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÅÍ»Æ1
-a
-java:S1155‹">Use isEmpty() to check whether the collection is empty or not.(ÒÅíùÿÿÿÿ8ÑÍ»Æ1
-B
-java:S1068"'Remove this unused "TAG" private field.(Î¹«Âùÿÿÿÿ
-@
-java:S1068"*Remove this unused "logger" private field.(÷¸úó

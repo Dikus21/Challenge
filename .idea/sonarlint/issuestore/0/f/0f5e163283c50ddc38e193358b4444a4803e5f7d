@@ -1,7 +1,0 @@
-
-…
-java:S14888"cImmediately return this expression instead of assigning it to the temporary variable "authorities".(¯²ùşÿÿÿÿ8¯Ò“†Ä1
-a
-java:S1874"DRemove this use of "WebSecurityConfigurerAdapter"; it is deprecated.(Ë¶Ï“8µÒ“†Ä1
-l
-java:S18747"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(”„‰˜ûÿÿÿÿ8·Ò“†Ä1

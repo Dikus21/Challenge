@@ -10,6 +10,11 @@
         <option value="$PROJECT_DIR$/Challenge_7/merchant/pom.xml" />
         <option value="$PROJECT_DIR$/Challenge_7/gateaway/pom.xml" />
         <option value="$PROJECT_DIR$/Challenge_7/scheduler/pom.xml" />
+        <option value="$PROJECT_DIR$/Challenge_Microservices/user/pom.xml" />
+        <option value="$PROJECT_DIR$/Challenge_Microservices/scheduler/pom.xml" />
+        <option value="$PROJECT_DIR$/Challenge_Microservices/order/pom.xml" />
+        <option value="$PROJECT_DIR$/Challenge_Microservices/merchant/pom.xml" />
+        <option value="$PROJECT_DIR$/Challenge_Microservices/gateaway/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />

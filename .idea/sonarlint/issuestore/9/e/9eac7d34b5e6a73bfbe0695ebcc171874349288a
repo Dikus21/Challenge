@@ -1,13 +1,0 @@
-
-m
-java:S1192("KDefine a constant instead of duplicating this literal "merchantId" 4 times.(¹ëµøÿÿÿÿ8İœèñÇ1
-t
-java:S1192B"RDefine a constant instead of duplicating this literal "Product not found" 3 times.(Ï¢µûÿÿÿÿ8İœèñÇ1
-l
-java:S1192?"ODefine a constant instead of duplicating this literal "Id is required" 3 times.(ŒñÀ¹8İœèñÇ1
-
-java:S1192)"sDefine a constant instead of duplicating this literal "merchant id not found, please register as merchant" 4 times.(é›c8İœèñÇ1
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8àœèñÇ1
-_
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8àœèñÇ1

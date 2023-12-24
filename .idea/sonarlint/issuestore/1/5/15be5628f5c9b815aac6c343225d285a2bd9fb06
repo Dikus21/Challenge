@@ -1,26 +1,0 @@
-
-z
-java:S1488"_Immediately return this expression instead of assigning it to the temporary variable "strDate".(Ñˆƒùÿÿÿÿ
-o
-java:S1104"YMake code_notFound a static final constant or non-public and provide accessors if needed.(Û€¨Œ
-s
-java:S1104"XMake codeRequired a static final constant or non-public and provide accessors if needed.(Æÿ‹øüÿÿÿÿ
-q
-java:S1104"VMake isRequired a static final constant or non-public and provide accessors if needed.( ±ãùÿÿÿÿ
-r
-java:S1104"WMake code_sukses a static final constant or non-public and provide accessors if needed.(¬ò»şÿÿÿÿ
-m
-java:S1104"WMake code_server a static final constant or non-public and provide accessors if needed.(‘®ç
-k
-java:S1104"UMake code_null a static final constant or non-public and provide accessors if needed.(ñç¹í
-u
-java:S1104"ZMake message_sukses a static final constant or non-public and provide accessors if needed.(‰Í¡½øÿÿÿÿ
-m	java:S116"XRename this field "code_notFound" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û€¨Œ
-p	java:S116"VRename this field "code_sukses" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ò»şÿÿÿÿ
-k	java:S116"VRename this field "code_server" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘®ç
-i	java:S116"TRename this field "code_null" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñç¹í
-s	java:S116"YRename this field "message_sukses" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í¡½øÿÿÿÿ
-@
-java:S1659"%Declare "message" on a separate line.(ù¸Æüÿÿÿÿ
-b
-java:S5998"LRefactor this repetition that can lead to a stack overflow for large inputs.(´ÖÊ

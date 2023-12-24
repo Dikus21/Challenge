@@ -1,15 +1,0 @@
-
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8İï«íÇ1
-W
-java:S1874"5Remove this use of "TokenEnhancer"; it is deprecated.(¹Ç™Íüÿÿÿÿ8Şï«íÇ1
-U
-java:S1874"9Remove this use of "OAuth2AccessToken"; it is deprecated.(ğ¦ƒ,8àï«íÇ1
-U
-java:S1874"9Remove this use of "OAuth2AccessToken"; it is deprecated.(ğ¦ƒ,8àï«íÇ1
-X
-java:S1874"<Remove this use of "OAuth2Authentication"; it is deprecated.(ğ¦ƒ,8àï«íÇ1
-]
-java:S1874"@Remove this use of "DefaultOAuth2AccessToken"; it is deprecated.(È»¹¹8áï«íÇ1
-^
-java:S1874!"<Remove this use of "OAuth2Authentication"; it is deprecated.(îÔĞ±üÿÿÿÿ8áï«íÇ1

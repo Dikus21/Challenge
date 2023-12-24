@@ -1,25 +1,0 @@
-
-K
-java:S1121%".Extract the assignment out of this expression.(÷°–8£¥•úÃ1
-P
-java:S1121'".Extract the assignment out of this expression.(©•¬øÿÿÿÿ8£¥•úÃ1
-K
-java:S1121*".Extract the assignment out of this expression.(÷°–8£¥•úÃ1
-J
-java:S1121.".Extract the assignment out of this expression.(÷ü‰8£¥•úÃ1
-m	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÔŒ›8£¥•úÃ1
-;
-java:S2119"Save and re-use this "Random".(–áÍÈ8ª¥•úÃ1
-5
-java:S2140"Use "nextInt()" instead.(†¥Œ8ª¥•úÃ1
-Z
-java:S1854%"=Remove this useless assignment to local variable "show_data".(÷°–8ª¥•úÃ1
-_
-java:S1854'"=Remove this useless assignment to local variable "show_data".(©•¬øÿÿÿÿ8ª¥•úÃ1
-Z
-java:S1854*"=Remove this useless assignment to local variable "show_data".(÷°–8ª¥•úÃ1
-Y
-java:S1854."=Remove this useless assignment to local variable "show_data".(÷ü‰8ª¥•úÃ1
-K
-java:S1481!".Remove this unused "show_data" local variable.(ïÔŒ›8«¥•úÃ1
-]	java:S1252"<This block of commented-out lines of code should be removed.(Î÷îŒıÿÿÿÿ8Ú‰úÃ1
